@@ -1,0 +1,3 @@
+module CommentAttribute
+  # Your code goes here...
+end

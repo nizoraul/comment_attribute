@@ -11,7 +11,7 @@ require "action_cable/engine"
 require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
-require "comment_attribute"
+require_relative "../../../lib/comment_attribute/comment_attribute.rb"
 
 module Dummy
   class Application < Rails::Application

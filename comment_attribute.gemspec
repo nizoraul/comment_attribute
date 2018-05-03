@@ -9,15 +9,15 @@ Gem::Specification.new do |s|
   s.version     = CommentAttribute::VERSION
   s.authors     = ["nizoraul"]
   s.email       = ["nizoraul@gmail.com"]
-  s.homepage    = "http://"
-  s.summary     = "Summary of CommentAttribute."
-  s.description = "Description of CommentAttribute."
+  s.homepage    = "https://github.com/nizoraul/comment_attribute"
+  s.summary     = "DBのコメントでActiverecordの要素にアクセス"
+  s.description = "Activerecordを拡張してDBのコメントを利用してAttributeへのアクセスを可能とするgem"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 5.0.0"
 
-  s.add_development_dependency "mysql2"
+  s.add_development_dependency "mysql2", "< 0.5"
   s.add_development_dependency "rspec-rails"
 end

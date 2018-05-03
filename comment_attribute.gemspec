@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "DBのコメントでActiverecordの要素にアクセス"
   s.description = "Activerecordを拡張してDBのコメントを利用してAttributeへのアクセスを可能とするgem"
   s.license     = "MIT"
+  s.require_paths = ['lib/comment_attribute']
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 

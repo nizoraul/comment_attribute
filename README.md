@@ -15,21 +15,26 @@ migration
 class CreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users, comment: "ユーザ" do |t|
-      t.string :first_name, comment: '姓'
-      t.string :last_name, comment: '名'
+      t.string :last_name, comment: '姓'
+      t.string :first_name, comment: '名'
     end
   end
 end
 ```
 example
 ```ruby
-user = User.new(first_name: "野比", last_name: "のび太")
+user = User.new(last_name: "野比", first_name: "のび太")
 
 #read
-puts user["姓"] #=> 野比
+user["姓"] #=> 野比
+user.comments #=> {"id" => nil, "姓" => "野比", "名" => "のび太"}
 
 #write
 user['名'] = "しずか"
+
+#other
+user.comment_to_attr_name("姓") #=> "last_name"
+user.attr_name_to_comment("last_name") #=> "姓"
 ```
 
 ## Requirement
